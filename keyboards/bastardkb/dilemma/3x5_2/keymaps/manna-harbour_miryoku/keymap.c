@@ -17,8 +17,14 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+#define BASE 0
+#define NAV 1
+#define MEDIA 2
+#define NUM 3
+#define SYM 4
+#define FUN 5
 
-#define DILEMMA_AUTO_SNIPING_ON_LAYER 5 //Fun Layer
+#define DILEMMA_AUTO_SNIPING_ON_LAYER FUN //Fun Layer
 
 #    ifdef DILEMMA_AUTO_SNIPING_ON_LAYER
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -26,3 +32,18 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 #    endif // DILEMMA_AUTO_SNIPING_ON_LAYERLAYER
+
+
+//define layer compbos
+const uint16_t PROGMEM thumbcombos_base_right[] = {LT(SYM, KC_ENT), LT(NUM, KC_BSPC), COMBO_END};
+const uint16_t PROGMEM thumbcombos_base_left[] = {LT(NAV, KC_SPC), LT(FUN, KC_TAB), COMBO_END};
+
+//define open parant left thumb combo
+const uint16_t PROGMEM thumbcombos_sym[] = {KC_RPRN, KC_UNDS, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  COMBO(thumbcombos_base_right, LT(FUN, KC_DEL)),
+  COMBO(thumbcombos_base_left, LT(MEDIA, KC_ESC)),
+  COMBO(thumbcombos_sym, KC_LPRN)
+};
+//#endif

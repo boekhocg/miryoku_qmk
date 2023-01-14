@@ -4,3 +4,4 @@
 
 RGB_MATRIX_ENABLE = no     # Enable keyboard RGB matrix functionality
 VIA_ENABLE = no
+MIRYOKU_NAV=INVERTEDT
