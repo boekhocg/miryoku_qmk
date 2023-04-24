@@ -48,3 +48,4 @@
 #define CIRQUE_PINNACLE_DIAMETER_MM 40
 #define CIRQUE_PINNACLE_CURVED_OVERLAY
 #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE // Circular scroll.
+#define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE //Enable inertial cursor. Cursor continues moving after a flick gesture and slows down by kinetic friction.

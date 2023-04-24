@@ -82,5 +82,5 @@ all within the tapping term, by default the dual-role key will perform its tap a
 If the PERMISSIVE_HOLD option is enabled, the dual-role key will perform its hold action instead.*/
 //#define PERMISSIVE_HOLD
 
-#define BILATERAL_COMBINATIONS 500
+#define BILATERAL_COMBINATIONS 700
 
