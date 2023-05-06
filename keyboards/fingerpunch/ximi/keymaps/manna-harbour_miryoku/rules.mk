@@ -1,0 +1,12 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+MIRYOKU_KLUDGE_THUMBCOMBOS=no
+#AUDIO_ENABLE=yes
+HAPTIC_ENABLE=yes
+FP_TRACKBALL_RIGHT_ONLY=yes
+ENCODER_ENABLE=yes
+FP_HAPTIC_CUT_COPY_PASTE=yes
+FP_HAPTIC_SAVE=yes
+#FP_AUDIO_SAVE=yes
+

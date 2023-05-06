@@ -9,16 +9,49 @@
 #define MIRYOKU_LAYER_BASE \
 KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
 LGUI_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_G,              KC_M,              LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),      LGUI_T(KC_O),      \
-LT(U_FUN,KC_Z), ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
+LT(U_MOUSE,KC_Z), ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
 U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_SPC),  LT(U_FUN,KC_TAB),LT(U_SYM,KC_ENT),  LT(U_NUM,KC_BSPC), LT(U_FUN,KC_DEL),  U_NP,              U_NP
+/*
+#if defined (KEYBOARD_bastardkb_charybdis_3x5_v2_splinky_3)
 
-#define MIRYOKU_LAYER_FUN \
-TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              KC_PSCR,           KC_F7,             KC_F8,             KC_F9,             KC_F12,            \
-KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              KC_SCRL,           KC_F4,             KC_F5,             KC_F6,             KC_F11,            \
-U_UND,             DRGSCRL, 		  SNIPING,           DPI_MOD, 			S_D_MOD,              KC_PAUS,           KC_F1,             KC_F2,             KC_F3,             KC_F10,            \
-U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,             KC_TAB,            KC_SPC,            KC_APP,            U_NP,              U_NP
+    #define MIRYOKU_LAYER_FUN \
+    TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              KC_PSCR,           KC_F7,             KC_F8,             KC_F9,             KC_F12,            \
+    KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              KC_SCRL,           KC_F4,             KC_F5,             KC_F6,             KC_F11,            \
+    U_UND,             DRGSCRL, 		  SNIPING,           DPI_MOD, 			S_D_MOD,              KC_PAUS,           KC_F1,             KC_F2,             KC_F3,             KC_F10,            \
+    U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,             KC_TAB,            KC_SPC,            KC_APP,            U_NP,              U_NP
+
+#endif
+
+#if defined (KEYBOARD_fingerpunch_ximi)
 
 
+    #define MIRYOKU_LAYER_FUN \
+    TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              KC_PSCR,           KC_F7,             KC_F8,             KC_F9,             KC_F12,            \
+    KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              KC_SCRL,           KC_F4,             KC_F5,             KC_F6,             KC_F11,            \
+    U_UND,             FP_SCROLL_MOMENT,  FP_SNIPE_MOMENT,   FP_POINT_DPI_UP, 	FP_SNIPE_DPI_UP,   KC_PAUS,           KC_F1,             KC_F2,             KC_F3,             KC_F10,            \
+    U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,           KC_TAB,            KC_SPC,            KC_APP,            U_NP,              U_NP
+
+#endif
+*/
+
+#if defined (KEYBOARD_bastardkb_charybdis_3x5_v2_splinky_3)
+
+    #define MIRYOKU_LAYER_MOUSE \
+   TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
+   KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_NU,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           \
+   U_UND,             DRGSCRL, 		     SNIPING,           DPI_MOD, 		   S_D_MOD,  U_NA,    U_NU,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
+   U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_BTN2,           KC_BTN1,           KC_BTN3,           U_NP,              U_NP
+#endif
+
+#if defined (KEYBOARD_fingerpunch_ximi)
+
+  #define MIRYOKU_LAYER_MOUSE \
+   TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  FP_POINT_DPI_RESET, FP_SCROLL_DPI_RESET,  U_RDO,   FP_SCROLL_DPI_RESET,             U_CPY,             U_CUT,             U_UND,             \
+   KC_LGUI,           KC_LALT,           KC_LCTL,           FP_POINT_DPI_UP,    FP_SNIPE_DPI_UP,     U_NU,     FP_SCROLL_DPI_UP,           KC_MS_D,           KC_MS_U,           KC_MS_R,           \
+   U_UND,             FP_SCROLL_MOMENT,  FP_SNIPE_MOMENT,   FP_POINT_DPI_DN,    FP_SNIPE_DPI_DN,     U_NA,     FP_SCROLL_DPI_DN,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
+   U_NP,              U_NP,              U_NA,              U_NA,               U_NA,                KC_BTN2,  KC_BTN1,           KC_BTN3,           U_NP,              U_NP
+   
+#endif
 
 #define U_TAP U_NUM 
 #define U_TD_U_TAP U_TD_U_NUM
